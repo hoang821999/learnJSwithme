@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var person = {
+            firstName:  "Viet",// thuộc tính
+            lastName: " Hoàng",
+            tuoi: 24,
+            fullName: function() { // phương thức để thực hiện nv gì đó
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        alert(person.firstName);
+        alert(person.fullName());
+    </script>
+</body>
+</html>

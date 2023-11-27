@@ -1,0 +1,11 @@
+1 đối tượng bao gồm: thuộc tính và phương thức
+
+VD:
+var person = {
+    firstName:  "Viet",// thuộc tính
+    lastName: " Hoàng",
+    id: 1234,
+    fullName: function() { // phương thức để thực hiện nv gì đó
+        return this.firstName + " " + this.lastName;
+    }
+};

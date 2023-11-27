@@ -1,0 +1,16 @@
+Định nghĩa hàm: là thực thi 1 nhiệm vụ nào đó. nó có thể trả về 1 kết quả hoặc không trả về kết quả
+//Hàm có giá trị trả về
+function nhanHaiSo(x,y) {
+    return x*y
+};
+
+Gọi hàm:
+var tich = nhanHaiSo(3,4);
+alert(tich);
+
+Biến cục bộ:
+Biến được khai báo trong hàm
+Chỉ được tham chiếu đến trong phạm vi khai báo
+Biến toàn cục:
+Biến được khai báo ngoài hàm
+Có thể tham chiếu đến từ bất cứ đâu

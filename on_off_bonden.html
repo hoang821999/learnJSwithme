@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 200px;
+            text-align: center;
+        }
+        .container img {
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            background-color: #ccc;
+            border-radius: 10px;
+            padding: 5px 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img id="bongden" src="./img/off_lamp.png" alt="Đèn tắt" >
+        <h1 id="txt">Bóng đèn</h1>
+        <input type="button" value="on" onclick="bongden(1)">
+        <input type="button" value="off" onclick="bongden(2)">
+    </div>
+    <script>
+        function bongden(x) {
+        var den = document.getElementById("bongden");
+        var txt = document.getElementById("txt");
+        switch (x) {
+            case 1:
+                den.src = "./img/on_lamp.png";
+                txt.style.color = "orange";
+                break;
+            case 2:
+                den.src = "./img/off_lamp.png";
+                txt.style.color = "black";
+                break;
+        }
+        }
+    </script>
+</body>
+</html>

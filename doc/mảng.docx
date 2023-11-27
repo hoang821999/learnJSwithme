@@ -1,0 +1,10 @@
+Mảng trong JS được khai báo bằng cách:
+C1:
+var cars = ["Saab", "Volvo", "BMW"]
+C2:
+var cars = new Array("Saab", "Volvo", "BMW");
+
+Truy xuất mảng:
+var name = cars[0] -> Saab
+Thay đổi giá trị mới cho phân tử trong mảng:
+cars[0] = "Honda";
