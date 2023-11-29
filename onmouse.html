@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .boxcenter {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .boxcenter img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>Event (Sự kiện)</title>
+</head>
+<body onload="loadingimg()">
+    <div class="boxcenter">
+        <img src="./img/off_lamp.png" alt="Bóng đèn tắt" id="bongden" onmouseover="overimg()" onmouseout="outimg()"> 
+        <h1 id="txt">Bóng Đèn</h1>
+    </div>
+
+    <script>
+        var img1 = new Image();
+        var img2 = new Image()
+        function loadingimg() {
+            img1.src = "./img/off_lamp.png";
+            img2.src = "./img/on_lamp.png";
+        }
+        function  overimg() {
+            document.getElementById("bongden").src = img2.src;
+            document.getElementById("bongden").style.border ="1px yellow solid";
+
+        }
+        function outimg() {
+            document.getElementById("bongden").src = img1.src;
+            document.getElementById("bongden").style.border ="0";
+        }
+    </script>
+</body>
+</html>

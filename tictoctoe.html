@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .boxcenter {
+        width: 400px;
+        margin: 0 auto;
+    }
+    button {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        margin: 3px;
+        font-size: 24px;
+        background-color: #eee;
+        border: 1px #999 solid;
+    }
+    </style>
+    <title>Trò chơi X & O</title>
+</head>
+<body>
+    <div class="boxcenter">
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+        <button onclick="clickhere(this)"></button>
+    </div>
+    <script>
+        var flag = 1;
+        var count = 0; //click vào đó + 1
+
+        function clickhere(x) {
+            if(flag == 1) {
+                x.style.backgroundColor = "red";
+                x.style.color ="yellow";
+                x.innerText = "X";
+                
+            } else {
+                x.style.backgroundColor = "green";
+                x.style.color ="White";
+                x.innerText = "O";
+            }
+
+            x.setAttribute("disabled","true")
+            
+            flag=!flag;
+            count++;
+            if(count==9) {
+                alert("Hết game");
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

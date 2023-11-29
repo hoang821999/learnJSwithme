@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .boxcenter {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .boxcenter img {
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            border-radius: 40px;
+            height: 344px;
+            object-fit: cover;
+            object-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            border: 1px red solid;
+            background-color: #f60;
+            color: #fff;
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-size: 2rm;
+        }
+        button:hover {
+            background-image: linear-gradient(#900,#000);
+            cursor: pointer;
+        }
+    </style>
+    <title>Tối ưu hoá Slide Img</title>
+</head>
+<body onload="loadimg()">
+    <div class="boxcenter">
+        <div class="row">
+            <img src="./img/Pic_01.jpg" alt="Slide" id="slideshow">
+            <h1 id="title">1/5</h1>
+            <button onclick="slideshow(1)">First</button>
+            <button onclick="slideshow(2)">Prev</button>
+            <button onclick="slideshow(3)">Next</button>
+            <button onclick="slideshow(4)">Last</button>
+        </div>
+    </div>
+    <script>
+        var hinhanh = [];
+        var j = 0;
+        function loadimg() {
+            for (let i = 0; i < 5; i++) {
+                hinhanh[i] = new Image();
+                hinhanh[i].src = "./img/Pic_0"+ i + ".jpg";
+            }
+            loadtitle();
+        }
+
+        function slideshow(x) {
+            switch (x) {
+                case 1:
+                    j=0;
+                    break;
+                case 2:
+                    if(j>0) j--;
+                    break;
+                case 3:
+                    if (j < hinhanh.length - 1) j++;
+                    break;
+                case 4:
+                    j = hinhanh.length - 1;
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById("slideshow").src = hinhanh[j].src;
+            loadtitle();
+        }
+
+        function loadtitle() {
+            document.getElementById("title").innerHTML = (j+1) + "/" + hinhanh.length;
+        }
+    </script>
+</body>
+</html>
