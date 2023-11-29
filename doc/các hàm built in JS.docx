@@ -1,0 +1,12 @@
+Các phương thức thường gặp:
+Tên thuộc tính      Giải thích
++ getElementById(id): Tham chiếu đến 1 nút duy nhất có thuộc tính id giống với giá trị (id) cần tìm.
++ getElementByTagName(tagName): Tham chiếu đến tất cả các nút có thuộc tính tagName giống với thẻ cần tìm, hay hiểu đơn giản
+hơn là tìm tất cả các phần tử DOM mang thẻ HTML cùng loại
++ getElementByName(Name): Tham chiếu đến tất cả các nút có thuộc tính name cần tìm.
++ getAtribute(attibuteName): Lấy giá trị của thuộc tính
++ querySelector(selector): Tham chiếu đến 1 nút duy nhất có thuộc tính selector giống như (selector) cần tìm
++ querySelectorAll(selector): Tham chiếu đến tất cả các nút có thuộc tính selector giống như (selector) cần tìm
++ setAttribute(attributeName, value): Sửa giá trị của thuộc tính
++ appendChild(node): Thêm 1 nút con vào nút hiện tại
++ removeChild(node): Xóa 1 nút con khỏi nút hiện tại

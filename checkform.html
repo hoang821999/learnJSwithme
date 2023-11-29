@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .boxcenter {
+        width: 350px;
+        height: 180px;
+        margin: 0 auto;
+        border: 2px #968585 solid;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:linear-gradient(to bottom, white, #ccc);
+    }
+    .box {
+        text-align: ;
+    }
+    </style>
+    <title>Check Form</title>
+</head>
+<body>
+    <div class="boxcenter">
+        <div class="box">
+            <form name="checkform">
+                <table>
+                <tr>
+                    <td>Sản phẩm</td>
+                    <td><input type="text" name="sanpham"></td>
+                </tr>
+                <tr>
+                    <td>Loại sản phẩm</td>
+                    <td><select name="loaisp">
+                        <option value="0" selected></option>
+                        <option value="loại 1">Loại 1</option>
+                        <option value="loại 2">Loại 2</option>
+                        <option value="loại 3">Loại 3</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Đơn giá</td>
+                    <td><input type="text" name="dongia"></td>
+                </tr>
+                <tr>
+                    <td>Nơi nhận hàng</td>
+                    <td><input type="radio" name="noinhan" onclick="chiphivc(0)" checked>Nội thành <input type="radio" name="noinhan" onclick="chiphivc(1)">Ngoại thành</td>
+                </tr>
+                <tr id="phivc">
+                    <td>Phí vận chuyển</td>
+                    <td><input type="text" name="phivc" value="1000"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Đặt mua" onclick=" return datmua()"></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("phivc").style.display = "none";
+
+        function chiphivc(x) {
+            if(x == 1) document.getElementById("phivc").style.display = "";  
+            else document.getElementById("phivc").style.display = "none";
+        }
+
+        function datmua() {
+        var tensp = document.forms["checkform"]["sanpham"];
+        if(tensp.value == "") {
+            alert("Nhập lại tên sản phẩm");
+            tensp.focus();
+            return false; // Khi lỗi thì nó dừng lại quay lại form để cho mình chọn lại chứ không đi tiếp sang tiếp theo
+        }
+
+        var loaisp = document.forms["checkform"]["loaisp"];
+        if(loaisp.value == 0) {
+            alert("Chọn lại loại sản phẩm");
+            loaisp.focus();
+            return false;
+        }
+        
+        var dongia = document.forms["checkform"]["dongia"];
+        if(dongia.value <= 0) {
+            alert("Nhập lại đơn giá");
+            dongia.focus();
+            return false;
+        }
+
+
+
+        }
+
+    </script>
+</body>
+</html>
