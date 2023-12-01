@@ -1,0 +1,18 @@
+Tên sự kiện			Giải thích
++ onload			Thực thi khi sau khi trình duyệt tải hết các tài nguyên về (kết thúc quá trình loading)
++ onblur			Thực thi khi element không còn ở trạng thái focus	
++ onfocus			Thực thi khi thẻ nhận được focus (click con trỏ chuột vào thẻ)
++ onchange			Thực thi khi giá trị trong thẻ được thay đổi
++ oninput			Thực thi khi thẻ nhân được hành động input(nhập) dữ liệu từ người dùng
++ onsubmit			Thực thi khi thẻ form nhận được hành động submit (click nút submit)
++ onkeydown			Thực thi khi người dùng nhấn phím xuống thẻ được cài đặt sự kiện (sự kiện xảy ra cho tất cả các phím trên bàn phím, bao gồm cả các phím có ký tự và các phím chức năng)
++ onkeypress		Thực thi khi người dùng nhấn phím xuống thẻ được cài đặt sự kiện (không áp dụng cho các phím chức năng)
+Tên thuộc tính		Giải thích
++ onclick           Thực thi khi thẻ nhân được hành động click chuột vào bản thân
++ ondblclick        Thực thi khi thẻ nhận được hành động click liên tiếp chuột trái 2 lần
++ onmousedown       Thực thi khi thẻ đang nhận được click chuột và giữ chuột không thả ra
++ onmousemove       Thực thi khi thẻ được setup nhận được hành động di chuột qua phạm vi của thẻ - trong sự kiện này,
+sau khi chuột đã trong phạm vi, chỉ cần di chuyển 1px sự kiện cũng sẽ được thực thi
++ onmouseover       Thực thi khi thẻ được setup nhận được hành động di chuột vào phạm vi của thẻ - giống như trạng thái :hover của css - sự kiện chỉ xảy ra 1 lần khi chuột vào phạm vi,
+khi di chuyển trong phạm vi của thẻ thì không thực thi nữa
++ onmouseout        Thực thi khi thẻ được setup nhận được hành động chuột di chuyển ra khỏi phạm vi của thẻ - sự kiện này có điều kiện xảy ra ngược vs sự kiện onmouseover

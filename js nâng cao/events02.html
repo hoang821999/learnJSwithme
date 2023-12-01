@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <title>Sự kiện trong JS (2)</title>
+</head>
+<body>
+    <input type="text" id="txtInput" value = "33691E">
+    <h3>Input Text</h3>
+    <script>
+        var h3Text = document.querySelector("h3");
+        var txtInput = document.querySelector("#txtInput");
+
+        txtInput.onkeyup = function() {
+            h3Text.innerHTML = txtInput.value; // lấy giá trị nhập vô từ input để gắn vào h3
+        }
+    </script>
+</body>
+</html>

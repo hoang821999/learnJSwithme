@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <title>Sự kiện trong JS</title>
+</head>
+<body>
+    <div class="boxcenter">
+        <div id="box"></div>
+    </div>
+    <script>
+        var divTag = document.getElementById("box");
+        divTag.onmouseover = function () {
+            this.style.backgroundColor = "red";
+        }
+        divTag.onmouseout = function () {
+            this.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

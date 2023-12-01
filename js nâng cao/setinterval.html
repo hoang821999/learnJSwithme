@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setinterval (setimout nhưng lặp lại vô tận)</title>
+</head>
+<body>
+    <p>Việt Hoàng</p>
+    <script>
+        var bgColor = ["green", "yellow", "red", "blue", "orange", "violet"];
+        var pTag = document.querySelector("p");
+        var i = 0;
+
+        function changebgcolor() {
+            pTag.style.color = bgColor[i];
+            pTag.style.transition = "0.5s";
+            i++;
+            if (i == bgColor.length) i = 0;
+        }
+        setInterval(changebgcolor, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .boxcenter {
+            width: 500px;
+            margin: 0 auto;
+        }
+        input {
+            background-color: #eee;
+            width: 200px;
+            height: 20px;
+            border: 1px #ccc solid;
+        }
+        table {
+            width: 100%;
+        }
+        button {
+            background-color: #003366;
+            width: 100px;
+            height: 30px;
+            font-weight: bold;
+            font-size: 12px;
+            border: 1px #003399 solid;
+            color: #eeeeee;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="boxcenter">
+        <table>
+            <tr>
+                <td><label>ID:</label></td>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <td><label>Name: </label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td><select name="gender" id="gender">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label> </label></td>
+                <td><button onclick="them()">Thêm</button></td>
+            </tr>
+        </table>
+        <ul id="dsuser">
+
+        </ul>
+    </div>
+    <script>
+        var ds = [{
+            id: 1,
+            name: "HOTB", 
+            gender:1
+        }, {
+            id: 2,
+            name: "HOANV", 
+            gender:1
+        }, {
+            id: 3,
+            name: "HieuTT", 
+            gender:2
+        }];
+
+        function loadds() {
+            var users = "";
+            var gen = "";
+            ds.forEach(element => {
+                if(element['gender'] == 1) gen = "Male";
+                else gen = "Female";
+                users+= "<li>" + element['id'] + " - " + element['name'] + " - " + gen + "</li>";
+            });
+            document.getElementById("dsuser").innerHTML = users;
+        }
+        loadds();
+
+        function them() {
+            var id = document.querySelector("#id").value;
+            var name = document.querySelector("#name").value;
+            var gender = document.querySelector("#gender").value;
+            var newuser = {id: id, name: name, gender: gender};
+
+            ds.push(newuser);
+            loadds()
+        }
+    </script>
+</body>
+</html>
